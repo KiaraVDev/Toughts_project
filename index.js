@@ -20,6 +20,19 @@ app.use(express.json())
 
 //  Session Middleware
 
+app.use(
+  session({
+    name: "session",
+    secret: "noss_secret",
+    resave: false,
+    saveUninitialized: false,
+    store: new FileStore({
+      logFn: function() {},
+      path: require('path').join(require('os').tmpdir(), 'sessions'),
+    }),
+  }),
+)
+
 
 conn 
   .sync()
