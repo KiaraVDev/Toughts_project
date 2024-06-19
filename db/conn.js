@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize')
 const sequelize = new Sequelize('toughts2', 'root', 'vertrigo', {
     host: 'localhost',
     dialect: 'mysql',
-})
+});
 
 try{
     sequelize.authenticate()
