@@ -8,6 +8,19 @@ const app = express()
 
 const conn = require('./db/conn')
 
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars')
+
+app.use(
+  express.urlencoded({
+      extended: true
+  })
+)
+app.use(express.json())
+
+//  Session Middleware
+
+
 conn 
   .sync()
   .then(() => {
