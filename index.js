@@ -34,7 +34,7 @@ app.use(
 )
 
 
-conn 
+conn
   .sync()
   .then(() => {
     app.listen(3000)
