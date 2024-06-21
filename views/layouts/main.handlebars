@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    {{!-- Boostram icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Toughts</title>
 </head>
 <body>
-    {{ body }}
+    <nav id="navbar">
+        <a href="/" id="logo">
+           <img src="/img/toughts_logo.png" alt="Logo_Toughts">
+        </a>
+        <ul>
+            <li><a href="/">Pensamentos</a></li>
+            {{!-- Urls após a autentificação --}}
+            <li><a href="/login">Entrar</a></li>
+            <li><a href="/register">Registrar</a></li>
+        </ul>
+    </nav>
+   <div class="container">
+    {{!-- Mensagem de Sistema --}}
+    {{{ body }}}
+   </div>
+   <footer>
+    <p><span>Toughts</span> &copy; 2024</p>
+   </footer>
 </body>
 </html>
