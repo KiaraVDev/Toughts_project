@@ -13,6 +13,12 @@ const conn = require('./db/conn')
 const Tought = require('./models/Tought')
 const User = require('./models/User')
 
+// Import Routes
+const toughtsRoutes = require('./routes/toughtsRoutes')
+
+// Import controller
+const ToughtController = require('./controllers/ToughtController')
+
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars')
 
@@ -62,6 +68,10 @@ app.use((req, res, next) => {
 
   next()
 })
+//  Routes
+app.use('/touhts', toughtsRoutes)
+
+app.get('/', ToughtController.showToughts)
 
 conn
   // .sync({ force: true})
