@@ -10,7 +10,7 @@ const conn = require('./db/conn')
 
 // Models
 
-const Tought = require('./models/Tought')
+const Tought = require('./models/Tought')         
 const User = require('./models/User')
 
 // Import Routes
